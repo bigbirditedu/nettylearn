@@ -113,6 +113,7 @@ public class CommonHttpClient extends ChannelDuplexHandler implements HttpClient
 
     /**
      * 发起Http调用
+     *
      * @param req
      * @return
      */
@@ -240,24 +241,18 @@ public class CommonHttpClient extends ChannelDuplexHandler implements HttpClient
     @Override
     public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
         if (msg instanceof HttpClientReq) {
-
             HttpClientReq data = (HttpClientReq) msg;
             DefaultFullHttpRequest req = convertReq(data, ctx);
             ctx.writeAndFlush(req, promise);
-
         } else {
             super.write(ctx, msg, promise);
         }
     }
 
     DefaultFullHttpRequest convertReq(HttpClientReq data, ChannelHandlerContext ctx) {
-
         URL url = data.getUrlObj();
-
         DefaultFullHttpRequest req = null;
-
         if (data.getContent() != null && !data.getContent().isEmpty()) {
-
             ByteBuf bb = null;
             boolean allowGzip = data.isGzip() && data.getContent().length() >= minSizeToGzip;
             if (!allowGzip) {
@@ -298,7 +293,7 @@ public class CommonHttpClient extends ChannelDuplexHandler implements HttpClient
 
         HttpUtil.setKeepAlive(req, data.isKeepAlive());
 
-        req.headers().set(HttpHeaderNames.USER_AGENT, "krpc httpclient 1.0");
+        req.headers().set(HttpHeaderNames.USER_AGENT, "common httpclient 1.0");
 
         return req;
     }

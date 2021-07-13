@@ -30,7 +30,6 @@ import java.nio.charset.Charset;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-
 @ChannelHandler.Sharable
 public class MyNettyHttpServer extends ChannelDuplexHandler implements InitClose, StartStop {
     static Logger log = LoggerFactory.getLogger(MyNettyHttpServer.class);

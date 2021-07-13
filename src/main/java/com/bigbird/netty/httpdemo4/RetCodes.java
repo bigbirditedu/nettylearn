@@ -34,7 +34,7 @@ public class RetCodes {
     static public final int SERVICE_NOT_ALLOWED = -630;
     static public final int SERVER_CONNECTION_BROKEN = -631; // just for server log, not returned to client
 
-    // krpc.httpclient component error
+    // httpclient component error
     static public final int HTTPCLIENT_NO_CONNECT = -640;
     static public final int HTTPCLIENT_CONNECTION_BROKEN = -641;
     static public final int HTTPCLIENT_TIMEOUT = -642;
@@ -123,7 +123,8 @@ public class RetCodes {
 
     static private final Map<Integer, String> map = new HashMap<>();
 
-    static public void init() { } // used for static initialization
+    static public void init() {
+    } // used for static initialization
 
     static {
         map.put(0, "");
