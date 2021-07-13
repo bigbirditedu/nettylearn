@@ -1,4 +1,4 @@
-package com.zpc.netty.nettydemo01;
+package com.bigbird.netty.chatdemo1;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

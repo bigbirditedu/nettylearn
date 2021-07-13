@@ -1,4 +1,4 @@
-package com.zpc.netty.nettydemo01;
+package com.bigbird.netty.chatdemo1;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
