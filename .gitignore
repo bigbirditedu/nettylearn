@@ -29,3 +29,28 @@ build/
 
 ### VS Code ###
 .vscode/
+
+.classpath
+.gradle/
+.project
+.settings/
+.idea/
+bin/
+build/
+out/
+target/
+jarcache/
+upload/
+tracesniffer.cfg
+tracesniffer.log
+*.iml
+registry.cache
+target.full/
+.libs/
+protoc.exe
+gradlew
+gradlew.bat
+HELP.md
+settings.gradle
+gradle/
+
